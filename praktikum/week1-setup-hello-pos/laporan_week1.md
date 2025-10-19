@@ -34,46 +34,106 @@ Di sisi lain, paradigma fungsional memandang program sebagai kumpulan fungsi mat
 ---
 
 ## Kode Program
+Prosedural
 ```java
+package com.agripos;
 
+public class HelloProcedural {
+    public static void main(String[] args) {
+        String name = "Amru Muiz Fauzan";
+        int nim = 230202731;
+
+        System.out.println("Hello World, I'm " + name + " dengan nim " + nim);
+    }
+}
+```
+
+OOP
+```java
+package com.upb.agripos;
+
+//Class
+class Mahasiswa {
+    String name;
+    int nim;
+
+    //Constructor
+    public Mahasiswa(String name, int nim) {
+        this.name = name;
+        this.nim = nim;
+    }
+
+    //Method atau Function
+    public void perkenalan() {
+        System.out.println("Hello World, I'm " + name + " dengan nim " + nim);
+    }
+}
+
+public class HelloOOP {
+    public static void main(String[] args) {
+        Mahasiswa mahasiswa = new Mahasiswa("Amru Muiz Fauzan", 230202731);
+        mahasiswa.perkenalan();
+    }
+}
+```
+
+Fungsional
+```java
+package com.upb.agripos;
+import java.util.function.BiFunction;
+
+public class HelloFunctional {
+    public static void main(String[] args) {
+        BiFunction<String, Integer, String> perkenalan =
+                (name, nim) -> "Hello World, I'm " + name + " dengan nim " + nim;
+
+        System.out.println(perkenalan.apply("Amru Muiz Fauzan", 230202731));
+    }
+}
 ```
 
 ---
 
 ## Hasil Eksekusi
-![Screenshot hasil](screenshots/hasil.png)
+![Screenshot hasil](screenshots/ss-helloworld-procedural.png)
+![Screenshot hasil](screenshots/ss-helloworld-oop.png)
+![Screenshot hasil](screenshots/ss-helloworld-functional.png)
 
 ---
 
 ## Analisis
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
+Dari ketiga paradigma tersebut, kita bisa mengetahui fokus masing-masing paradigma seperti apa. 
+
+Pertama untuk prosedural memiliki fokus pada urutan prosedur kode dan semua logika langsung ditulis di ``main``.
+
+Kedua untuk OOP lebih fokus pada objek dan class, ada constructor dan method. Data dibungkus ke dalam objek dan perilaku ditentukan oleh method. OOP ini memungkinkan untuk ngoding secara modular dan reusable.
+
+Ketiga untuk functional lebih fokus pada ``apa yang ingin dicapai`` daripada mementingkan langkah-langkahnya. Fungsi dianggap sebagai nilai, dan menggunakan lambda.
 
 ---
 
 ## Kesimpulan
+Secara keseluruhan, setiap paradigma pemrograman memiliki karakteristik dan keunggulan yang berbeda sesuai dengan kebutuhan sistem yang dikembangkan. Paradigma prosedural efektif untuk aplikasi berskala kecil dengan alur linear, namun menjadi kurang efisien ketika kompleksitas bertambah. Paradigma OOP menawarkan struktur modular yang memudahkan pengelolaan entitas dunia nyata, meningkatkan maintainability dan scalability, sehingga lebih sesuai untuk sistem kompleks seperti aplikasi POS yang membutuhkan pengelolaan objek secara berkelanjutan. Sementara itu, paradigma fungsional memberikan efisiensi dalam pengolahan data dan mengurangi duplikasi kode melalui pendekatan fungsi murni yang konsisten dan bebas efek samping. Dengan demikian, pemilihan paradigma yang tepat akan secara langsung memengaruhi kualitas arsitektur perangkat lunak, kemudahan pengembangan jangka panjang, serta tingkat keandalan sistem.
 
 ---
 
 ## Quiz
 ```
-**Apakah OOP selalu lebih baik dari prosedural?**
+Apakah OOP selalu lebih baik dari prosedural?
 Tidak selalu. OOP lebih unggul untuk sistem kompleks yang membutuhkan modularitas dan pemodelan objek dunia nyata. Namun, untuk program sederhana dengan alur linear, paradigma prosedural justru lebih efisien dan mudah diimplementasikan.
 
-**Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural? **
+Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
 Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
 Functional programming lebih cocok digunakan pada aplikasi yang berfokus pada pengolahan data, komputasi paralel, analisis statistik, dan transformasi data dalam jumlah besar karena paradigma ini meminimalkan efek samping dan meningkatkan konsistensi output.
 
-**Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi? **
+Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
 Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
 Paradigma prosedural memiliki maintainability yang rendah saat aplikasi tumbuh besar karena sulit dikelola. OOP meningkatkan maintainability dan scalability melalui struktur modular berbasis objek. Functional programming meningkatkan keandalan dan skalabilitas dengan kode yang bersifat stateless dan mudah diparalelisasi.
 
-**Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?**
+Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
 Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
 OOP lebih cocok karena sistem POS memiliki banyak entitas seperti Produk, Transaksi, dan Pembayaran yang dapat dimodelkan sebagai objek. Pendekatan ini mempermudah pengembangan fitur baru, integrasi modul, dan pemeliharaan jangka panjang.
 
-**Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?**
 Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?
 Paradigma fungsional menggunakan fungsi murni dan komposisi fungsi, sehingga satu fungsi dapat digunakan kembali di berbagai konteks tanpa perlu membuat kode tambahan. Hal ini mengurangi boilerplate dan membuat kode lebih ringkas, konsisten, dan mudah diuji.
 
