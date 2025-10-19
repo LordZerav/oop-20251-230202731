@@ -118,23 +118,19 @@ Secara keseluruhan, setiap paradigma pemrograman memiliki karakteristik dan keun
 ---
 
 ## Quiz
-```
-Apakah OOP selalu lebih baik dari prosedural?
+``Apakah OOP selalu lebih baik dari prosedural?``
 Tidak selalu. OOP lebih unggul untuk sistem kompleks yang membutuhkan modularitas dan pemodelan objek dunia nyata. Namun, untuk program sederhana dengan alur linear, paradigma prosedural justru lebih efisien dan mudah diimplementasikan.
 
-Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
-Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
+``Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?``
 Functional programming lebih cocok digunakan pada aplikasi yang berfokus pada pengolahan data, komputasi paralel, analisis statistik, dan transformasi data dalam jumlah besar karena paradigma ini meminimalkan efek samping dan meningkatkan konsistensi output.
 
-Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
-Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
+``Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?``
 Paradigma prosedural memiliki maintainability yang rendah saat aplikasi tumbuh besar karena sulit dikelola. OOP meningkatkan maintainability dan scalability melalui struktur modular berbasis objek. Functional programming meningkatkan keandalan dan skalabilitas dengan kode yang bersifat stateless dan mudah diparalelisasi.
 
-Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
-Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
+``Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?``
 OOP lebih cocok karena sistem POS memiliki banyak entitas seperti Produk, Transaksi, dan Pembayaran yang dapat dimodelkan sebagai objek. Pendekatan ini mempermudah pengembangan fitur baru, integrasi modul, dan pemeliharaan jangka panjang.
 
-Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?
+``Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?``
 Paradigma fungsional menggunakan fungsi murni dan komposisi fungsi, sehingga satu fungsi dapat digunakan kembali di berbagai konteks tanpa perlu membuat kode tambahan. Hal ini mengurangi boilerplate dan membuat kode lebih ringkas, konsisten, dan mudah diuji.
 
 ```
