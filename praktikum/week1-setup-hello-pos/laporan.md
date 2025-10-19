@@ -1,73 +1,80 @@
 # Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+Topik: Pengenalan Paradigma dan Setup Projek
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : Amru Muiz Fauzan
+- NIM   : 230202731
+- Kelas : 5IKRA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
-
+```
+- Mahasiswa mampu mendefinisikan paradigma prosedural, OOP, dan fungsional.
+- Mahasiswa mampu membandingkan kelebihan dan keterbatasan tiap paradigma.
+- Mahasiswa mampu memberikan contoh program sederhana untuk masing-masing paradigma.
+- Mahasiswa aktif dalam diskusi kelas (bertanya, menjawab, memberi opini).
+```
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+Paradigma pemrograman merupakan landasan fundamental dalam pengembangan perangkat lunak yang memengaruhi cara pengembang merancang struktur program, mengelola data, dan menyusun logika pemrosesan. Paradigma prosedural merupakan salah satu pendekatan klasik di mana program disusun sebagai rangkaian instruksi atau langkah-langkah terurut yang dipecah menjadi fungsi dan prosedur. Setiap prosedur dirancang untuk menyelesaikan tugas tertentu dan dieksekusi sesuai alur logika yang telah ditentukan secara linear. Paradigma ini efektif untuk aplikasi berskala kecil hingga menengah yang memiliki alur kerja yang jelas, namun seiring bertambahnya kompleksitas sistem, risiko terjadinya duplikasi kode dan kesulitan pemeliharaan dapat meningkat karena keterkaitan antar fungsi menjadi semakin erat. Dalam konteks sistem Agri-POS (Agriculture Point of Sale), paradigma prosedural dapat digunakan pada tahap awal untuk mempercepat pengembangan fitur dasar seperti input transaksi dan perhitungan total harga, namun akan kurang fleksibel saat sistem berkembang dan membutuhkan modularitas yang lebih tinggi.
+
+Sebaliknya, paradigma Object-Oriented Programming (OOP) menawarkan pendekatan yang lebih modern dengan merepresentasikan komponen sistem sebagai objek yang memiliki atribut (data) dan method (perilaku). Melalui konsep utama seperti enkapsulasi, pewarisan, dan polimorfisme, OOP memungkinkan struktur program menjadi lebih modular, terorganisir, dan mudah diimplementasikan ulang. Dalam konteks sistem Agri-POS, entitas seperti Produk, Transaksi, Pelanggan, dan Pembayaran dapat dimodelkan sebagai objek yang berinteraksi satu sama lain sesuai alur bisnis. Misalnya, objek Produk memiliki atribut seperti nama, harga, dan stok, sementara objek Transaksi memproses pembelian dan mengurangi stok secara otomatis. Dengan pendekatan ini, sistem menjadi lebih mudah dikembangkan, diuji, dan dipelihara karena setiap objek dapat dimodifikasi tanpa mengganggu struktur utama program secara keseluruhan. Hal ini sangat relevan untuk sistem pertanian modern yang memerlukan integrasi dengan inventori, pemasaran digital, dan manajemen distribusi secara berkelanjutan.
+
+Di sisi lain, paradigma fungsional memandang program sebagai kumpulan fungsi matematika murni yang menerima input dan menghasilkan output tanpa mengubah keadaan sistem (state). Pendekatan ini lebih menekankan pada ekspresi dan transformasi data melalui fungsi-fungsi bebas efek samping (pure functions), yang dapat meningkatkan keandalan sistem serta meminimalkan bug akibat perubahan variabel global. Paradigma ini sangat efektif untuk pengolahan data berskala besar, optimasi logika perhitungan, dan proses komputasi paralel. Dalam implementasi Agri-POS, paradigma fungsional dapat diterapkan pada modul perhitungan diskon dinamis, pengelolaan prediksi stok berbasis data statistik, serta analisis penjualan menggunakan algoritma fungsional. Dengan demikian, kombinasi OOP sebagai kerangka utama dan paradigma fungsional sebagai pendukung pengolahan data akan memberikan solusi yang adaptif, scalable, dan efisien untuk pengembangan sistem Agri-POS yang terintegrasi dan berorientasi masa depan.
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+1. Setup project: instal JDK, Intellij IDEA, Git, PostgreSQL dan JFX; membuat folder project oop-pos-230202731; git init repo; buat struktur awal src/main/java/com/upb/agripos/; memastikan semua tools dapat berjalan.
+2. Membuat program sederhana dalam tiga paradigma: prosedural; oop; fungsional
+3. Melakukan commit + push dengan pesan `` week1-setup-hello-pos ``.
 
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
-
 ```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
+
 ```
-)
+
 ---
 
 ## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
 ![Screenshot hasil](screenshots/hasil.png)
-)
+
 ---
 
 ## Analisis
-(
 - Jelaskan bagaimana kode berjalan.  
 - Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
 - Kendala yang dihadapi dan cara mengatasinya.  
-)
+
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+```
+**Apakah OOP selalu lebih baik dari prosedural?**
+Tidak selalu. OOP lebih unggul untuk sistem kompleks yang membutuhkan modularitas dan pemodelan objek dunia nyata. Namun, untuk program sederhana dengan alur linear, paradigma prosedural justru lebih efisien dan mudah diimplementasikan.
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+**Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural? **
+Kapan functional programming lebih cocok digunakan dibanding OOP atau prosedural?
+Functional programming lebih cocok digunakan pada aplikasi yang berfokus pada pengolahan data, komputasi paralel, analisis statistik, dan transformasi data dalam jumlah besar karena paradigma ini meminimalkan efek samping dan meningkatkan konsistensi output.
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+**Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi? **
+Bagaimana paradigma (prosedural, OOP, fungsional) memengaruhi maintainability dan scalability aplikasi?
+Paradigma prosedural memiliki maintainability yang rendah saat aplikasi tumbuh besar karena sulit dikelola. OOP meningkatkan maintainability dan scalability melalui struktur modular berbasis objek. Functional programming meningkatkan keandalan dan skalabilitas dengan kode yang bersifat stateless dan mudah diparalelisasi.
+
+**Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?**
+Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural?
+OOP lebih cocok karena sistem POS memiliki banyak entitas seperti Produk, Transaksi, dan Pembayaran yang dapat dimodelkan sebagai objek. Pendekatan ini mempermudah pengembangan fitur baru, integrasi modul, dan pemeliharaan jangka panjang.
+
+**Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?**
+Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)?
+Paradigma fungsional menggunakan fungsi murni dan komposisi fungsi, sehingga satu fungsi dapat digunakan kembali di berbagai konteks tanpa perlu membuat kode tambahan. Hal ini mengurangi boilerplate dan membuat kode lebih ringkas, konsisten, dan mudah diuji.
+
+```
